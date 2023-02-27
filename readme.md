@@ -8,3 +8,4 @@ The objective of this project is to be able to build my own API that can tell th
 --learned how to install and use express
 <br>
 --learned that express does the same thing node does but with a lot less code
+--learned that stylesheet won't be applied to server unless you add a get method for it
