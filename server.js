@@ -44,6 +44,15 @@ app.get('/main.js', (request, response) => {
     response.sendFile(__dirname + '/main.js')
 })
 
-app.get('/api', (request, response) => {
-    response.json()
+app.get('/api/:rapperName', (request, response) => {
+    const rappersName = request.params.rapperName
+    
+    if (rappers[rappersName]){
+        response.json(rappers[rappersName])
+        console.log((rappers[rappersName]))
+    }
+    else {
+        response.json(rappers)
+    }
+    
 })
