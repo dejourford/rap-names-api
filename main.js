@@ -3,7 +3,8 @@ const searchBtn = document.querySelector('#searchBtn')
 const birthName = document.querySelector('#birthName')
 
 async function getName ()  {
-    const rapperName = document.querySelector('#rapperName').value
+    const rapperName = document.querySelector('#rapperName').value.toLowerCase()
+    console.log(rapperName)
     const response = await fetch(`http://localhost:8/api/${rapperName}`)
     const data = await response.json()
     
